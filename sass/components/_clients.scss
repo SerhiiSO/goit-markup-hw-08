@@ -27,7 +27,7 @@
 .clients__link {
   display: flex;
   margin-bottom: 30px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   // justify-content: center;
   width: 210px;
@@ -43,4 +43,8 @@
     fill: var(--link-hover-focus);
     border-color: var(--link-hover-focus);
   }
+}
+.social__icon {
+  justify-content: center;
+  align-items: center;
 }
