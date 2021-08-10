@@ -632,12 +632,6 @@ body {
   margin-left: 93px;
 }
 
-@media screen and (max-width: 768px) {
-  .nav__list {
-    display: none;
-  }
-}
-
 .contacts__list {
   display: none;
 }
@@ -652,12 +646,6 @@ body {
 .burger-btn__icon {
   height: 40px;
   width: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .burger-btn {
-    display: none;
-  }
 }
 
 .burger-btn__icon:hover,
@@ -676,29 +664,9 @@ body {
   border-bottom-style: solid;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-}
-
 .header__container {
   display: flex;
   align-items: center;
-}
-
-@media screen and (max-width: 767px) {
-  .header__container {
-    justify-content: space-between;
-  }
 }
 
 .mobile-menu {
