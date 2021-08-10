@@ -63,21 +63,29 @@
   }
 }
 .about__subtitle {
-  font-weight: 500;
+  margin-bottom: 10px;
+
+  font-weight: 700;
   font-size: 16px;
-  line-height: 1.17;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
 }
 .about__thumb {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 24px 122px;
+  @media screen and (min-width: 768px) {
+    padding: 24px 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
 }
 .about__descr {
   color: var(--primary-font-color);
   font-size: 16px;
-  line-height: 1.17;
-  margin-top: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin-bottom: 16px;
 }
