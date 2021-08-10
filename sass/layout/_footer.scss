@@ -114,12 +114,18 @@
   margin-bottom: 20px;
   line-height: 1.17;
   text-transform: uppercase;
+  @media screen and(max-width:768px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-top: 60px;
+  }
   @media screen and (min-width: 1200px) {
     text-align: left;
   }
 }
 .subscribe__box {
-  margin-top: 60px;
+  margin-top: auto;
 
   @media screen and (min-width: 1200px) {
     margin-top: 0;

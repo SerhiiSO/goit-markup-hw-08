@@ -1209,6 +1209,18 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  .subscribe__title {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .subscribe__title {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .subscribe__title {
     text-align: left;
@@ -1216,7 +1228,7 @@ body {
 }
 
 .subscribe__box {
-  margin-top: 60px;
+  margin-top: auto;
 }
 
 @media screen and (min-width: 1200px) {
