@@ -56,7 +56,7 @@
 
 .social, .advantages__list, .activity__list, .about__list, .clients__list, .nav__list, .contacts__list, .nav-list,
 .contacts-list,
-.social-list, .address__list, .social__list, .example__list {
+.social-list, .address__list, .social__list, .sort__list, .example__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -517,7 +517,7 @@ body {
   }
 }
 
-.close-btn {
+.modal-btn {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -531,22 +531,27 @@ body {
   background-color: transparent;
   cursor: pointer;
   fill: var(--secondary-font-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover, .close-btn:focus {
+.modal-btn:hover, .modal-btn:focus {
   border-color: var(--link-hover-focus);
   fill: var(--link-hover-focus);
 }
 
-.close-btn__icon {
-  width: 30px;
-  height: 30px;
+.modal-btn:hover__icon, .modal-btn:focus__icon {
+  width: 15px;
+  height: 15px;
   fill: #212121;
 }
 
-.close-btn__icon:hover, .close-btn__icon:focus {
+.modal-btn:hover__icon:hover, .modal-btn:hover__icon:focus, .modal-btn:focus__icon:hover, .modal-btn:focus__icon:focus {
   border-color: var(--link-hover-focus);
   fill: var(--link-hover-focus);
+}
+
+.modal-btn__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -809,14 +814,19 @@ body {
   }
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 10px;
+.contacts__item {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:first-child) {
     margin-left: 50px;
-    margin-bottom: 0;
   }
 }
 
@@ -851,6 +861,7 @@ body {
 .burger-btn__icon {
   width: 40px;
   height: 40px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .burger-btn__icon:hover, .burger-btn__icon:focus {
@@ -868,11 +879,13 @@ body {
   visibility: hidden;
   pointer-events: none;
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   background-color: white;
+  transition: opacity 500ms linear, visibility 500ms linear;
 }
 
 .mobile-menu.is-open {
@@ -889,6 +902,9 @@ body {
 
 .close-btn {
   position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
   border: none;
   background-color: transparent;
   width: 40px;
@@ -898,7 +914,9 @@ body {
 .close-btn__icon {
   width: 40px;
   height: 40px;
-  padding-top: 15px;
+  padding-top: 21px;
+  padding-right: 25px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__container {
@@ -1304,14 +1322,23 @@ body {
 }
 
 .sort__list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -8px;
+  margin-top: -15px;
 }
 
-.sort__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .sort__list {
+    justify-content: center;
+  }
+}
+
+.sort__item {
+  margin-left: 8px;
+  margin-top: 15px;
 }
 
 .sort__button {
@@ -1336,15 +1363,52 @@ body {
 }
 
 .example__list {
-  margin: -15px;
   display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .example__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .example__list {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .example__item {
-  margin: 15px;
-  flex-basis: calc(100% / 3 - 30px);
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}
+
+@media screen and (max-width: 767px) {
+  .example__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .example__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .example__item {
+    width: 370px;
+  }
 }
 
 .example__link {

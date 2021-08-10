@@ -15,7 +15,7 @@
     height: 609px;
   }
 }
-.close-btn {
+.modal-btn {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -29,23 +29,27 @@
   background-color: transparent;
   cursor: pointer;
   fill: var(--secondary-font-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     border-color: var(--link-hover-focus);
     fill: var(--link-hover-focus);
-  }
-  &__icon {
-    width: 30px;
-    height: 30px;
-    fill: #212121;
-    &:hover,
-    &:focus {
-      border-color: var(--link-hover-focus);
-      fill: var(--link-hover-focus);
+    &__icon {
+      width: 15px;
+      height: 15px;
+      fill: #212121;
+      &:hover,
+      &:focus {
+        border-color: var(--link-hover-focus);
+        fill: var(--link-hover-focus);
+      }
     }
   }
 }
 
+.modal-btn__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
