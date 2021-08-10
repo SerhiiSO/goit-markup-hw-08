@@ -1,15 +1,18 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border: 1px solid #ececec;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
   @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -56,7 +59,7 @@
   &::after {
     position: absolute;
     left: 0;
-    bottom: -33px;
+    bottom: -40px;
     display: block;
     content: "";
     width: 100%;
@@ -127,6 +130,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 
   &__icon {
     width: 40px;
@@ -167,18 +171,24 @@
   position: absolute;
   right: 0;
   top: 0;
-  padding: 0;
+  padding-top: 20px;
+  padding-right: 15px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
   width: 40px;
   height: 40px;
   &__icon {
-    width: 40px;
-    height: 40px;
-    padding-top: 21px;
-    padding-right: 25px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 25px;
+    height: 25px;
+    &:hover,
+    &:focus {
+      fill: var(--link-hover-focus);
+    }
   }
+}
+.close-btn__icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu__container {
   width: 100%;
@@ -214,6 +224,8 @@
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: var(--logo-accent-color);
