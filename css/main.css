@@ -714,8 +714,8 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
-    padding-top: 23px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -809,9 +809,14 @@ body {
   }
 }
 
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:first-child) {
     margin-left: 50px;
+    margin-bottom: 0;
   }
 }
 
