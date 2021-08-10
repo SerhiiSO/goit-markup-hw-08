@@ -461,6 +461,13 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .close-btn {
   position: absolute;
   right: 8px;
@@ -478,6 +485,17 @@ body {
 }
 
 .close-btn:hover, .close-btn:focus {
+  border-color: var(--link-hover-focus);
+  fill: var(--link-hover-focus);
+}
+
+.close-btn__icon {
+  width: 30px;
+  height: 30px;
+  fill: #212121;
+}
+
+.close-btn__icon:hover, .close-btn__icon:focus {
   border-color: var(--link-hover-focus);
   fill: var(--link-hover-focus);
 }
@@ -592,6 +610,15 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--primary-font-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-modal {
@@ -801,7 +828,7 @@ body {
   }
 }
 
-.close-btn {
+.close-btn__mobile {
   position: absolute;
   border: none;
   background-color: transparent;
@@ -809,7 +836,7 @@ body {
   height: 40px;
 }
 
-.close-btn__icon {
+.close-btn__mobile--icon {
   padding-top: 15px;
 }
 

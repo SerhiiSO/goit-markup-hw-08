@@ -10,6 +10,10 @@
   background: var(--primary-white);
   box-shadow: var(--modal-form-box-shadow);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(max-width:1199px) {
+    width: 450px;
+    height: 609px;
+  }
 }
 .close-btn {
   position: absolute;
@@ -29,6 +33,16 @@
   &:focus {
     border-color: var(--link-hover-focus);
     fill: var(--link-hover-focus);
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: #212121;
+    &:hover,
+    &:focus {
+      border-color: var(--link-hover-focus);
+      fill: var(--link-hover-focus);
+    }
   }
 }
 
@@ -135,6 +149,12 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--primary-font-color);
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-modal {

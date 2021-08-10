@@ -145,13 +145,13 @@
     display: none;
   }
 }
-.close-btn {
+.close-btn__mobile {
   position: absolute;
   border: none;
   background-color: transparent;
   width: 40px;
   height: 40px;
-  &__icon {
+  &--icon {
     padding-top: 15px;
   }
 }
